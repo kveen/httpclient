@@ -1,13 +1,41 @@
-httpclient - HTTP accessing library.
-Copyright (C) 2000-2012  NAKAMURA, Hiroshi  <nahi@ruby-lang.org>.
+# httpclient 
 
-'httpclient' gives something like the functionality of libwww-perl (LWP) in
-Ruby.  'httpclient' formerly known as 'http-access2'.
+A robust http access library for Ruby, similar to libww-perl. Formerly known as http-access2. Project site <https://github.com/nahi/httpclient>
 
-See HTTPClient for documentation.
+# Author
+Hiroshi Nakamura <nahi@ruby-lang.org>
+
+## Install
+
+    $ gem install httpclient
 
 
-== Features
+## Usage
+
+ruby file
+
+    TO DO
+    
+irb
+
+    TO DO
+    
+Command line interface - Make a GET request then show the wiredump and
+parsed result.
+
+    $ httpclient get https://www.google.co.jp/ q=ruby
+    
+httpclient shell - Make a GET request from the httpclient shell
+
+    $ httpclient
+    > get "https://www.google.co.jp/", :q => :ruby
+    
+
+Also see the HTTPClient documentation <http://rubydoc.info/gems/httpclient/2.3.4.1/frames>.
+Or check out some more examples in sample/howto.rb.
+
+
+## Features
 
 * methods like GET/HEAD/POST/* via HTTP/1.1.
 * HTTPS(SSL), Cookies, proxy, authentication(Digest, NTLM, Basic), etc.
@@ -25,30 +53,22 @@ See HTTPClient for documentation.
   * you don't have to care HTTP/1.1 persistent connection
     (httpclient cares instead of you)
 
-* Not supported now
+* Currently not supported
   * Cache
   * Rather advanced HTTP/1.1 usage such as Range, deflate, etc.
     (of course you can set it in header by yourself)
 
-== httpclient command
 
-Usage: 1) % httpclient get https://www.google.co.jp/ q=ruby
-Usage: 2) % httpclient
+## Bug report or Feature request
 
-For 1) it issues a GET request to the given URI and shows the wiredump and
-the parsed result.  For 2) it invokes irb shell with the binding that has a
-HTTPClient as 'self'.  You can call HTTPClient instance methods like;
+  * Search current issues <https://github.com/nahi/httpclient/issues>
+  * If the issue hasn't been previously reported, create a new issue.
+  * And/Or make a pull request.
 
-  > get "https://www.google.co.jp/", :q => :ruby
-
-== Author
-
-Name:: Hiroshi Nakamura
-E-mail:: nahi@ruby-lang.org
-Project web site:: http://github.com/nahi/httpclient
+Thanks in advance. 
 
 
-== License
+## License
 
 This program is copyrighted free software by NAKAMURA, Hiroshi.  You can
 redistribute it and/or modify it under the same terms of Ruby's license;
@@ -61,51 +81,8 @@ I asked Maebashi-san he agreed that I can redistribute it under the same terms
 of Ruby.  Many thanks to Maebashi-san.
 
 
-== Install
 
-=== Gem
-
-You can install httpclient with rubygems.
-
-  % gem install httpclient
-
-=== Package
-
-You can install httpclient with the bundled installer script.
-
-  $ ruby install.rb
-
-It will install lib/* to your site_ruby directory such as
-/usr/local/lib/ruby/site_ruby/1.8/.
-
-For uninstall, delete installed files from your site_ruby directory.
-
-
-== Usage
-
-See HTTPClient for documentation.
-You can also check sample/howto.rb how to use APIs.
-
-
-== Download
-
-* Gem repository
-  * https://rubygems.org/gems/httpclient
-
-* git: git://github.com/nahi/httpclient.git
-
-== Bug report or Feature request
-
-Please file a ticket at the project web site.
-
-1. find a similar ticket from https://github.com/nahi/httpclient/issues
-2. create a new ticket by clicking 'Create Issue' button.
-3. you can use github features such as pull-request if you like.
-
-Thanks in advance. 
-
-
-== Changes
+# Changelog
 
 = Changes in 2.3.3 =
 
